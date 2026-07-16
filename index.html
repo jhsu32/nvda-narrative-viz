@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>One Chart, Retold: NVIDIA's Transformation, FY2019-FY2026</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3-svg-annotation@2.5.1/d3-annotation.min.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <!-- header text is set per scene by script.js -->
+    <header class="masthead">
+      <div class="topper">
+        <span><b>One Chart, Retold</b> &middot; NVIDIA quarterly revenue, FY2019-FY2026</span>
+        <span id="scene-eyebrow">Part 1 of 4</span>
+      </div>
+      <h1 class="scene-title" id="scene-title">A gaming company</h1>
+      <p class="scene-lede" id="scene-lede"></p>
+    </header>
+
+    <figure class="chart-wrap">
+      <div id="legend" class="legend" hidden></div>
+      <div id="chart"></div>
+      <div id="tooltip" class="tooltip" hidden></div>
+
+      <!-- segment filters, shown only in the last scene -->
+      <div id="controls" class="controls" hidden>
+        <span class="controls-label">Show segments:</span>
+        <label><input type="checkbox" data-seg="datacenter" checked /> Data Center</label>
+        <label><input type="checkbox" data-seg="gaming" checked /> Gaming</label>
+        <label><input type="checkbox" data-seg="other" checked /> Everything else</label>
+      </div>
+
+      <figcaption class="source">
+        Source: <a href="https://investor.nvidia.com/financial-info/quarterly-results/default.aspx"
+        target="_blank" rel="noopener noreferrer">NVIDIA quarterly financial results</a>,
+        fiscal years 2019-2026. Revenue in millions of U.S. dollars.
+        NVIDIA's fiscal year ends in late January.
+      </figcaption>
+    </figure>
+
+    <nav class="scene-nav">
+      <button id="btn-back" class="nav-btn" type="button">&larr; Back</button>
+      <span class="progress" id="progress" aria-hidden="true">1 / 4</span>
+      <button id="btn-next" class="nav-btn nav-btn--primary" type="button">Next &rarr;</button>
+    </nav>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
